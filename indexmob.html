@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylemob.css">
+
+</head>
+<body>
+    <div class="rodacima">
+        <h1 class = "texto1">HBlog</h1>
+
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="menu" id="menu">
+        <a href="#">Meio Ambiente</a>
+        <a href="#">Entretenimento</a>
+        <a href="#">Sociologia</a>
+        <a href="#">Filosofia</a>
+        <a href="#">Ativismo</a>
+        <a href="#">Mural Artístico</a>
+        <a href="#">Blog</a>
+        <a href="#">Objetivos</a>
+        <a href="#">HB Transparente</a>
+        <a href="#">Quem somos?</a>
+    </div>
+    </div>
+<div>
+    <div class="container">
+        <div class="principal">
+            <h1 class="txtprincial">Notícias Recentes</h1>
+            <hr>
+        </div>
+        <div class="secundario">
+            <h1 class="txtsecundario">Em Alta</h1>
+            <hr>    
+            <h3 class = "top10">As mais acessadas</h3>
+                <div class="top10-item">1. Item 1</div>
+                <div class="top10-item">2. Item 2</div>
+                <div class="top10-item">3. Item 3</div>
+                <div class="top10-item">4. Item 4</div>
+                <div class="top10-item">5. Item 5</div>
+                <div class="top10-item">6. Item 6</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        var menuIcon = document.querySelector('.menu-icon');
+        if (menu.style.display === 'none') {
+            menu.style.display = 'block'; /* Exibir o menu */
+            menuIcon.style.display = 'none'; /* Ocultar a barra de três traços */
+        } else {
+            menu.style.display = 'none'; /* Ocultar o menu */
+            menuIcon.style.display = 'block'; /* Exibir a barra de três traços */
+        }
+    }
+
+    // Função para fechar o menu e exibir o botão ao clicar fora da barra de navegação
+    window.addEventListener('click', function(event) {
+        var menu = document.getElementById('menu');
+        var menuIcon = document.querySelector('.menu-icon');
+        if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+            menu.style.display = 'none'; /* Ocultar o menu */
+            menuIcon.style.display = 'block'; /* Exibir a barra de três traços */
+        }
+    });
+</script>
+
+
+</body>
+</html>
