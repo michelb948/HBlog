@@ -23,7 +23,7 @@ body {
     background-color: rgb(223, 223, 223);
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-   width: auto;
+    width: auto;
 }
 
 .rodabaixo a{
